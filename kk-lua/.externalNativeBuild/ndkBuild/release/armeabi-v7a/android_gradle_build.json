@@ -1,0 +1,169 @@
+{
+  "buildFiles": [
+    "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/Android.mk",
+    "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/Application.mk"
+  ],
+  "cleanCommands": [
+    "/Users/didi/Library/Android/sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDEBUG\u003d0 APP_PLATFORM\u003dandroid-9 NDK_OUT\u003d/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/build/intermediates/ndkBuild/release/lib NDK_APPLICATION_MK:\u003dsrc/main/jni/Application.mk clean"
+  ],
+  "libraries": {
+    "kk-lua-release-armeabi-v7a": {
+      "buildCommand": "/Users/didi/Library/Android/sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDEBUG\u003d0 APP_PLATFORM\u003dandroid-9 NDK_OUT\u003d/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/build/intermediates/ndkBuild/release/lib NDK_APPLICATION_MK:\u003dsrc/main/jni/Application.mk /Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/build/intermediates/ndkBuild/release/obj/local/armeabi-v7a/libkk-lua.so",
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "kk-lua",
+      "files": [
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/kk-lua.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/kk.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/lapi.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/lauxlib.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/lbaselib.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/lbitlib.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/lcode.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/lcorolib.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/lctype.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/ldblib.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/ldebug.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/ldo.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/ldump.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/lfunc.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/lgc.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/linit.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/liolib.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/llex.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/lmathlib.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/lmem.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/loadlib.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/lobject.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/lopcodes.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/loslib.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/lparser.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/lstate.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/lstring.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/lstrlib.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/ltable.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/ltablib.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/ltm.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/lundump.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/lutf8lib.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/lvm.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src/lzio.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni/lua-5.3.0/src\" \"-I/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/src/main/jni\" \"-DANDROID\" \"-O3\" \"-DLUA_USE_LINUX\" \"-ldl\" \"-std\u003dgnu99\" \"-Wall\" \"-Wextra\" \"-DLUA_COMPAT_5_2\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/didi/Library/Android/sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include\""
+        }
+      ],
+      "output": "/Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/build/intermediates/ndkBuild/release/obj/local/armeabi-v7a/libkk-lua.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-armeabi-v7a": {
+      "cCompilerExecutable": "/Users/didi/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-gcc"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}
