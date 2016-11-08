@@ -1,12 +1,17 @@
 package cn.kkserver.lua;
 
+import android.os.Handler;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import cn.kkserver.core.Value;
 
 /**
  * Created by zhanghailong on 2016/11/7.
  */
 
-public class LuaState extends Object {
+public class LuaState extends Handler {
 
     public final static int LUA_TNIL = 0;
     public final static int LUA_TBOOLEAN = 1;
@@ -23,6 +28,12 @@ public class LuaState extends Object {
 
     static {
         System.loadLibrary("kk-lua");
+    }
+
+    private static final List<IObjectReflect> _reflects = new ArrayList<>(4);
+
+    public static void addObjectReflect(IObjectReflect reflect) {
+        _reflects.add(reflect);
     }
 
     private final long _ptr;
@@ -103,8 +114,48 @@ public class LuaState extends Object {
             pushfunction(_ptr,(LuaFunction) value);
         }
         else {
+
+            for(IObjectReflect v : _reflects) {
+                if(v.canReflectToLuaObject(value)) {
+                    value = v.reflectToLuaObject(value);
+                    break;
+                }
+            }
+
             pushobject(_ptr,value);
         }
+    }
+
+    public void pushvalue(int idx) {
+        pushvalue(_ptr,idx);
+    }
+
+    public void pushnil() {
+        pushnil(_ptr);
+    }
+
+    public void pushstring(String value) {
+        pushstring(_ptr,value);
+    }
+
+    public void pushinteger(int value) {
+        pushinteger(_ptr,value);
+    }
+
+    public void pushnumber(double value) {
+        pushnumber(_ptr,value);
+    }
+
+    public void pushboolean(boolean value) {
+        pushboolean(_ptr,value);
+    }
+
+    public void pushfunction(LuaFunction value) {
+        pushfunction(_ptr,value);
+    }
+
+    public void pushobject(Object value) {
+        pushobject(_ptr,value);
     }
 
     public int gettop() {
@@ -155,7 +206,14 @@ public class LuaState extends Object {
 
         switch (type(_ptr,idx)) {
             case LUA_TOBJECT:
-                return toobject(_ptr,idx);
+                Object v = toobject(_ptr,idx);
+                for(IObjectReflect r : _reflects) {
+                    if(r.canReflectToJavaObject(v)) {
+                        v = r.reflectToJavaObject(v);
+                        break;
+                    }
+                }
+                return v;
             case LUA_TSTRING:
                 return tostring(_ptr,idx);
             case LUA_TNUMBER:
@@ -182,6 +240,20 @@ public class LuaState extends Object {
     public int getglobal(String name) {
         return getglobal(_ptr,name);
     }
+
+
+    public int ref() {
+        return ref(_ptr);
+    }
+
+    public void unref(int ref) {
+        unref(_ptr,ref);
+    }
+
+    public int getref(int ref) {
+        return getref(_ptr,ref);
+    }
+
     private final static native long alloc(Object v);
 
     private final static native void dealloc(long ptr);
@@ -237,5 +309,13 @@ public class LuaState extends Object {
     private final static native double tonumber(long ptr, int idx);
 
     private final static native Object toobject(long ptr, int idx);
+
+    private final static native int ref(long ptr);
+
+    private final static native void unref(long ptr, int ref);
+
+    private final static native int getref(long ptr, int ref);
+
+    private final static native void pushvalue(long ptr, int idx);
 
 }

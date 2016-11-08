@@ -172,11 +172,15 @@ static int Java_cn_kkserver_lua_LuaState_WeakObject_gc(lua_State * L) {
 
 static int Java_cn_kkserver_lua_LuaState_Function(lua_State * L) {
 
-    if(lua_type(L,1) == LUA_TUSERDATA ){
+    kk_log("Java_cn_kkserver_lua_LuaState_Function");
 
-        jobject * fn = (jobject *) lua_touserdata(L,1);
+    int idx = lua_upvalueindex(1);
 
-        if(fn) {
+    if(lua_type(L,idx) == LUA_TUSERDATA ){
+
+        jobject * fn = (jobject *) lua_touserdata(L,idx);
+
+        if(* fn) {
 
             jweak * v = NULL;
 
@@ -196,9 +200,11 @@ static int Java_cn_kkserver_lua_LuaState_Function(lua_State * L) {
                 JNIEnv *env = kk_env(&isAttach);
 
                 if(env) {
+                    kk_log("Java_cn_kkserver_lua_LuaState_Function 1");
                     jclass clazz = (*env)->FindClass(env,"cn/kkserver/lua/LuaFunction");
                     jmethodID invoke = (*env)->GetMethodID(env,clazz,"invoke","(Lcn/kkserver/lua/LuaState;)I");
-                    n = (*env)->CallIntMethod(env,invoke,*v);
+                    n = (*env)->CallIntMethod(env,*fn,invoke,*v);
+                    kk_log("Java_cn_kkserver_lua_LuaState_Function 2");
                 }
 
                 if(isAttach) {
@@ -598,4 +604,45 @@ Java_cn_kkserver_lua_LuaState_getmetatable(JNIEnv *env, jclass type, jlong ptr, 
 
     return lua_getmetatable(L,idx);
 
+}
+
+JNIEXPORT jint JNICALL
+Java_cn_kkserver_lua_LuaState_ref(JNIEnv *env, jclass type, jlong ptr) {
+
+    UNUSED(env);
+    UNUSED(type);
+
+    lua_State * L = (lua_State *) (long) ptr;
+    return luaL_ref(L,LUA_REGISTRYINDEX);
+}
+
+JNIEXPORT void JNICALL
+Java_cn_kkserver_lua_LuaState_unref(JNIEnv *env, jclass type, jlong ptr, jint ref) {
+
+    UNUSED(env);
+    UNUSED(type);
+
+    lua_State * L = (lua_State *) (long) ptr;
+    luaL_unref(L,LUA_REGISTRYINDEX,ref);
+
+}
+
+JNIEXPORT jint JNICALL
+Java_cn_kkserver_lua_LuaState_getref(JNIEnv *env, jclass type, jlong ptr, jint ref) {
+
+    UNUSED(env);
+    UNUSED(type);
+
+    lua_State * L = (lua_State *) (long) ptr;
+    return lua_rawgeti(L,LUA_REGISTRYINDEX,ref);
+}
+
+JNIEXPORT void JNICALL
+Java_cn_kkserver_lua_LuaState_pushvalue(JNIEnv *env, jclass type, jlong ptr, jint idx) {
+
+    UNUSED(env);
+    UNUSED(type);
+
+    lua_State * L = (lua_State *) (long) ptr;
+    lua_pushvalue(L,idx);
 }
