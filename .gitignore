@@ -39,11 +39,7 @@ captures/
 # Keystore files
 *.jks
 
-.idea
-.idea/*
+.idea/
 
-.externalNativeBuild
-.externalNativeBuild/*
-kk-lua/.externalNativeBuild
-kk-lua/.externalNativeBuild/*
+.externalNativeBuild/
 

@@ -1,8 +1,6 @@
 package cn.kkserver.lua;
 
-import java.lang.reflect.Array;
-import java.util.List;
-import java.util.Map;
+import cn.kkserver.core.Value;
 
 /**
  * Created by zhanghailong on 2016/11/7.
@@ -41,93 +39,19 @@ public class LuaState extends Object {
 
     public int get(Object object,String name) {
 
-        Object v = null;
-
-        if(object != null) {
-
-            if(object instanceof Map) {
-                v = ((Map<String,Object>) object).get(name);
-            }
-            else if(object instanceof List) {
-
-                int i = Integer.valueOf(name);
-
-                if(i >= 1 && i <= ((List<?>) object).size()) {
-                    v = ((List<?>) object).get(i - 1);
-                }
-            }
-            else if(object.getClass().isArray()) {
-
-                int size = Array.getLength(object);
-                int i = Integer.valueOf(name);
-
-                if(i >= 1 && i <= size) {
-                    v = Array.get(object,i - 1);
-                }
-            }
-            else if(object instanceof IGetter){
-                v = ((IGetter) object).get(name);
-            }
-            else {
-                try {
-                    java.lang.reflect.Field fd = object.getClass().getField(name);
-                    v = fd.get(object);
-                } catch (Throwable e) {
-                }
-            }
-
-        }
-
-        pushValue(v);
+        pushValue(Value.get(object,name));
 
         return 1;
     }
 
     public void set(Object object,String name) {
 
+
         if(object != null) {
 
             Object v = toValue(-1);
 
-            if(object instanceof Map) {
-                if(v == null) {
-                    if(((Map<String,Object>) object).containsKey(name)) {
-                        ((Map<String, Object>) object).remove(name);
-                    }
-                }
-                else {
-                    ((Map<String, Object>) object).put(name, v);
-                }
-            }
-            else if(object instanceof List) {
-
-                int i = Integer.valueOf(name);
-                if(i >= 1 && i <= ((List<?>) object).size()) {
-                    ((List<Object>) object).set(i-1,v);
-                }
-                else if(i == ((List<?>) object).size()) {
-                    ((List<Object>) object).add(v);
-                }
-            }
-            else if(object.getClass().isArray()) {
-
-                int size = Array.getLength(object);
-                int i = Integer.valueOf(name);
-
-                if(i >= 1 && i <= size) {
-                    Array.set(object,i - 1, v);
-                }
-            }
-            else if(object instanceof ISetter){
-                ((ISetter) object).set(name,v);
-            }
-            else {
-                try {
-                    java.lang.reflect.Field fd = object.getClass().getField(name);
-                    fd.set(object,v);
-                } catch (Throwable e) {
-                }
-            }
+            Value.set(object,name,v);
 
         }
 

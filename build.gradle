@@ -2,6 +2,7 @@
 
 buildscript {
     repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
         jcenter()
     }
     dependencies {
@@ -14,6 +15,8 @@ buildscript {
 
 allprojects {
     repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
+        maven { url 'http://maven.kkserver.cn/' }
         jcenter()
     }
 }

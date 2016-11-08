@@ -1,7 +1,0 @@
-rm -f /Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/build/intermediates/ndkBuild/debug/lib/armeabi-v7a/lib*.so
-rm -f /Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/build/intermediates/ndkBuild/debug/lib/armeabi-v7a/gdbserver
-rm -f /Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/build/intermediates/ndkBuild/debug/lib/armeabi-v7a/gdb.setup
-mkdir -p /Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/build/intermediates/ndkBuild/debug/lib/armeabi-v7a
-echo [armeabi-v7a] "Install        ": "libkk-lua.so => /Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/build/intermediates/ndkBuild/debug/lib/armeabi-v7a/libkk-lua.so"
-install -p /Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libkk-lua.so /Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/build/intermediates/ndkBuild/debug/lib/armeabi-v7a/libkk-lua.so
-/Users/didi/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-strip --strip-unneeded  /Users/didi/go/src/github.com/kkserver/kk-android-lua/kk-lua/build/intermediates/ndkBuild/debug/lib/armeabi-v7a/libkk-lua.so
