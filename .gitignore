@@ -42,3 +42,8 @@ captures/
 .idea
 .idea/*
 
+.externalNativeBuild
+.externalNativeBuild/*
+kk-lua/.externalNativeBuild
+kk-lua/.externalNativeBuild/*
+
