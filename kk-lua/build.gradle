@@ -33,7 +33,8 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile "kk:core:0.0.3@aar"
+    compile "kk:core:0.0.4@aar"
+    //compile project(':kk-core')
 }
 
 apply plugin: 'maven'

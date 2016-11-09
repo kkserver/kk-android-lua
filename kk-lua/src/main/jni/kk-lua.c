@@ -30,8 +30,6 @@ static int Java_cn_kkserver_lua_LuaState_Object_gc(lua_State * L) {
 
     }
 
-    kk_log("Java_cn_kkserver_lua_LuaState_Object_gc");
-
     return 0;
 }
 
@@ -165,14 +163,10 @@ static int Java_cn_kkserver_lua_LuaState_WeakObject_gc(lua_State * L) {
 
     }
 
-    kk_log("Java_cn_kkserver_lua_LuaState_WeakObject_gc");
-
     return 0;
 }
 
 static int Java_cn_kkserver_lua_LuaState_Function(lua_State * L) {
-
-    kk_log("Java_cn_kkserver_lua_LuaState_Function");
 
     int idx = lua_upvalueindex(1);
 
@@ -200,11 +194,9 @@ static int Java_cn_kkserver_lua_LuaState_Function(lua_State * L) {
                 JNIEnv *env = kk_env(&isAttach);
 
                 if(env) {
-                    kk_log("Java_cn_kkserver_lua_LuaState_Function 1");
                     jclass clazz = (*env)->FindClass(env,"cn/kkserver/lua/LuaFunction");
                     jmethodID invoke = (*env)->GetMethodID(env,clazz,"invoke","(Lcn/kkserver/lua/LuaState;)I");
                     n = (*env)->CallIntMethod(env,*fn,invoke,*v);
-                    kk_log("Java_cn_kkserver_lua_LuaState_Function 2");
                 }
 
                 if(isAttach) {
