@@ -33,7 +33,7 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile "kk:core:0.0.4@aar"
+    compile "kk:core:0.0.5@aar"
     //compile project(':kk-core')
 }
 
@@ -44,7 +44,7 @@ uploadArchives {
         mavenDeployer {
             pom.groupId = "kk"
             pom.artifactId = "lua"
-            pom.version = "0.0.3"
+            pom.version = "0.0.4"
             repository(url: RELEASE_REPOSITORY_URL) {
 
             }
