@@ -235,13 +235,26 @@ public class LuaState extends Handler {
                 while( next(_ptr,-2) != 0) {
 
                     switch(type(_ptr,-2)) {
-                        case LUA_TNUMBER:
-                            if(i + 1 == tointeger(_ptr,-2)) {
-                                i ++;
+                        case LUA_TNUMBER: {
+                            if (i + 1 == tointeger(_ptr, -2)) {
+                                i++;
                             }
-                            vs.add(toValue(-1));
-                        case LUA_TSTRING:
-                            map.put(tostring(_ptr,-2),toValue(-1));
+                            Object value = toValue(-1);
+                            if (value != null) {
+                                vs.add(value);
+                            }
+                        }
+                        break;
+                        case LUA_TSTRING: {
+                            String key = tostring(_ptr, -2);
+                            if (key != null) {
+                                Object value = toValue(-1);
+                                if (value != null) {
+                                    map.put(key, value);
+                                }
+                            }
+                        }
+                        break;
                     }
 
                     size ++;
@@ -261,6 +274,12 @@ public class LuaState extends Handler {
                 }
 
                 return map;
+            case LUA_TFUNCTION:
+                return "[function]";
+            case LUA_TLIGHTUSERDATA:
+                return "[lightuserdata]";
+            case LUA_TTHREAD:
+                return "[thread]";
         }
 
         return null;
