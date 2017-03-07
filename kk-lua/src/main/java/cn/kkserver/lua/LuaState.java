@@ -314,6 +314,8 @@ public class LuaState extends Handler {
         return getref(_ptr,ref);
     }
 
+    public int next(int idx) { return next(_ptr,idx); }
+
     private final static native long alloc(Object v);
 
     private final static native void dealloc(long ptr);
