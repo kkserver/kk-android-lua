@@ -638,3 +638,13 @@ Java_cn_kkserver_lua_LuaState_pushvalue(JNIEnv *env, jclass type, jlong ptr, jin
     lua_State * L = (lua_State *) (long) ptr;
     lua_pushvalue(L,idx);
 }
+
+JNIEXPORT jint JNICALL
+Java_cn_kkserver_lua_LuaState_next(JNIEnv *env, jclass type, jlong ptr, jint idx) {
+
+    UNUSED(env);
+    UNUSED(type);
+
+    lua_State * L = (lua_State *) (long) ptr;
+    return lua_next(L,idx);
+}

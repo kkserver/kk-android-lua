@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.3"
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
         minSdkVersion 10
@@ -33,8 +33,7 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile "kk:core:0.0.5@aar"
-    //compile project(':kk-core')
+    compile "kk:core:0.0.6@aar"
 }
 
 apply plugin: 'maven'
@@ -44,7 +43,7 @@ uploadArchives {
         mavenDeployer {
             pom.groupId = "kk"
             pom.artifactId = "lua"
-            pom.version = "0.0.4"
+            pom.version = "0.0.5"
             repository(url: RELEASE_REPOSITORY_URL) {
 
             }

@@ -4,6 +4,8 @@ import android.os.Handler;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 import cn.kkserver.core.Value;
 
@@ -220,6 +222,45 @@ public class LuaState extends Handler {
                 return tonumber(_ptr,idx);
             case LUA_TBOOLEAN:
                 return toboolean(_ptr,idx);
+            case LUA_TTABLE:
+                pushvalue(_ptr,idx);
+                int size = 0;
+                int i = 0;
+
+                List<Object> vs = new ArrayList<Object>();
+                Map<String,Object> map = new TreeMap<String,Object>();
+
+                pushnil(_ptr);
+
+                while( next(_ptr,-2) != 0) {
+
+                    switch(type(_ptr,-2)) {
+                        case LUA_TNUMBER:
+                            if(i + 1 == tointeger(_ptr,-2)) {
+                                i ++;
+                            }
+                            vs.add(toValue(-1));
+                        case LUA_TSTRING:
+                            map.put(tostring(_ptr,-2),toValue(-1));
+                    }
+
+                    size ++;
+
+                    pop(_ptr,1);
+
+                }
+
+                pop(_ptr,1);
+
+                if(size == 0) {
+                    return map;
+                }
+
+                if(i == size) {
+                    return vs;
+                }
+
+                return map;
         }
 
         return null;
@@ -317,5 +358,7 @@ public class LuaState extends Handler {
     private final static native int getref(long ptr, int ref);
 
     private final static native void pushvalue(long ptr, int idx);
+
+    private final static native int next(long ptr, int idx);
 
 }
