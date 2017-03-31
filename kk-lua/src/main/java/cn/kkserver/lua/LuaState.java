@@ -2,7 +2,9 @@ package cn.kkserver.lua;
 
 import android.os.Handler;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -68,6 +70,25 @@ public class LuaState extends Handler {
 
         }
 
+    }
+
+    public int len(Object object) {
+
+        if(object != null) {
+
+            if(object instanceof Collection) {
+                return ((Collection<?>) object).size();
+            }
+            else if(object instanceof Map) {
+                return ((Map<?,?>) object).size();
+            }
+            else if(object.getClass().isArray()) {
+                return Array.getLength(object);
+            }
+
+        }
+
+        return 0;
     }
 
     public void openlibs() {

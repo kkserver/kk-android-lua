@@ -138,6 +138,56 @@ static int Java_cn_kkserver_lua_LuaState_Object_set(lua_State * L) {
     return 0;
 }
 
+static int Java_cn_kkserver_lua_LuaState_Object_len(lua_State * L) {
+
+    int top = lua_gettop(L);
+
+    if(top > 0 && lua_type(L,- top) == LUA_TUSERDATA) {
+
+        jobject * v = lua_touserdata(L,- top);
+
+        if(gJavaVm) {
+
+            jboolean isAttach = 0;
+
+            JNIEnv *env = kk_env(&isAttach);
+
+            if(env) {
+
+                jweak * state = NULL;
+
+                lua_getglobal(L,"__JavaLuaState");
+
+                if(lua_type(L,-1) == LUA_TUSERDATA) {
+                    state = (jweak *) lua_touserdata(L,-1);
+                }
+
+                lua_pop(L,1);
+
+                if(state) {
+
+                    jclass clazz = (* env)->GetObjectClass(env,* state);
+
+                    jmethodID method = (* env)->GetMethodID(env,clazz,"len","(Ljava/lang/Object;)I");
+
+                    int len = (* env)->CallIntMethod(env,*state, method,*v);
+
+                    lua_pushinteger(L,len);
+
+                    return 1;
+                }
+            }
+
+            if(isAttach) {
+                (*gJavaVm)->DetachCurrentThread(gJavaVm);
+            }
+        }
+
+    }
+
+    return 0;
+}
+
 static int Java_cn_kkserver_lua_LuaState_WeakObject_gc(lua_State * L) {
 
     if(lua_type(L,-1) == LUA_TUSERDATA) {
@@ -419,6 +469,10 @@ Java_cn_kkserver_lua_LuaState_pushobject(JNIEnv *env, jclass type, jlong ptr, jo
 
     lua_pushstring(L,"__newindex");
     lua_pushcfunction(L,Java_cn_kkserver_lua_LuaState_Object_set);
+    lua_rawset(L,-3);
+
+    lua_pushstring(L,"__len");
+    lua_pushcfunction(L,Java_cn_kkserver_lua_LuaState_Object_len);
     lua_rawset(L,-3);
 
     lua_setmetatable(L,-2);
